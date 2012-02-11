@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>uk.ac.cam.ch.wwmm</groupId>
+        <artifactId>wwmm-parent</artifactId>
+        <version>3</version>
+    </parent>
+
+    <groupId>cml</groupId>
+    <artifactId>jumboconverters2-parent</artifactId>
+    <version>0.3-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Chempound Parent</name>
+
+    <repositories>
+        <repository>
+            <id>ucc-repo</id>
+            <url>https://maven.ch.cam.ac.uk/m2repo</url>
+        </repository>
+        <repository>
+            <id>restlet</id>
+            <url>http://maven.restlet.org</url>
+        </repository>
+    </repositories>
+
+    <properties>
+        <restlet.version>2.0.7</restlet.version>
+        <guice.version>3.0</guice.version>
+        <jena.version>2.6.3</jena.version>
+        <jena.arq.version>2.8.4</jena.arq.version>
+        <jena.tdb.version>0.8.6</jena.tdb.version>
+        <quartz.version>1.8.4</quartz.version>
+        <atomxom.version>0.2-SNAPSHOT</atomxom.version>
+        <jtidy.version>4aug2000r7-dev</jtidy.version>
+        <commons.io.version>2.0</commons.io.version>
+        <freemarker.version>2.3.16</freemarker.version>
+        <java3d.version>1.3.1</java3d.version>
+        <jgrapht.version>0.7.3</jgrapht.version>
+        <log4j.version>1.2.13</log4j.version>
+        <cdk.version>1.2.0</cdk.version>
+        <jcamp.version>0.1</jcamp.version>
+        <cml.groupId>cml</cml.groupId>
+        <jumbo.groupId>org.xml-cml</jumbo.groupId>
+        <jumbo.version>6.1-SNAPSHOT</jumbo.version>
+        <cmlxom.version>3.2-SNAPSHOT</cmlxom.version>
+        <jumbo-testutil.version>1.1-SNAPSHOT</jumbo-testutil.version>
+        <jumbounits.version>0.2-SNAPSHOT</jumbounits.version>
+        <jumboconverters.groupId>cml</jumboconverters.groupId>
+        <jumboconverters.version>0.3-SNAPSHOT</jumboconverters.version>
+        <jumboConverters.groupId>org.xml-cml</jumboConverters.groupId>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencyManagement>
+
+        <dependencies>
+            <dependency>
+                <groupId>com.hp.hpl.jena</groupId>
+                <artifactId>jena</artifactId>
+                <version>${jena.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hp.hpl.jena</groupId>
+                <artifactId>arq</artifactId>
+                <version>${jena.arq.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hp.hpl.jena</groupId>
+                <artifactId>tdb</artifactId>
+                <version>${jena.tdb.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.0</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.4</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>4.0.3</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpmime</artifactId>
+                <version>4.0.3</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.quartz-scheduler</groupId>
+                <artifactId>quartz</artifactId>
+                <version>${quartz.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sf.atomxom</groupId>
+                <artifactId>atomxom-core</artifactId>
+                <version>${atomxom.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sf.atomxom</groupId>
+                <artifactId>atomxom-feeds</artifactId>
+                <version>${atomxom.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava-collections</artifactId>
+                <version>r03</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.inject</groupId>
+                <artifactId>guice</artifactId>
+                <version>${guice.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.inject.extensions</groupId>
+                <artifactId>guice-multibindings</artifactId>
+                <version>${guice.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.inject.extensions</groupId>
+                <artifactId>guice-servlet</artifactId>
+                <version>${guice.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.restlet.jee</groupId>
+                <artifactId>org.restlet</artifactId>
+                <version>${restlet.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.restlet.jee</groupId>
+                <artifactId>org.restlet.ext.freemarker</artifactId>
+                <version>${restlet.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.restlet.jee</groupId>
+                <artifactId>org.restlet.ext.fileupload</artifactId>
+                <version>${restlet.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.restlet.jee</groupId>
+                <artifactId>org.restlet.ext.json</artifactId>
+                <version>${restlet.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>2.3.16</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.thoughtworks.xstream</groupId>
+                <artifactId>xstream</artifactId>
+                <version>1.3.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>xom</groupId>
+                <artifactId>xom</artifactId>
+                <version>1.2.5</version>
+            </dependency>
+
+            <dependency>
+                <groupId>${jumbo.groupId}</groupId>
+                <artifactId>jumbo</artifactId>
+                <version>${jumbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>2.5</version>
+            </dependency>
+
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.8.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>1.8.5</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.6.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>1.6.1</version>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
+
+</project>

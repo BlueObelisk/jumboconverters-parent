@@ -1,0 +1,22 @@
+
+# maven
+^target/
+/target/
+
+# intellij
+^.idea/
+\.iml$
+
+# eclipse
+^\.classpath$
+/\.classpath$
+^\.project$
+/\.project$
+^\.settings/
+/\.settings/
+
+# temp files
+~$
+\.old$
+^temp/
+/temp/
