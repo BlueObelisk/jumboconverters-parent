@@ -15,7 +15,7 @@
     <version>0.3-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>Chempound Parent</name>
+    <name>JumboConverters Parent</name>
 
     <repositories>
         <repository>
@@ -44,7 +44,7 @@
         <jgrapht.version>0.7.3</jgrapht.version>
         <log4j.version>1.2.13</log4j.version>
         <cdk.version>1.2.0</cdk.version>
-        <jcamp.version>0.1</jcamp.version>
+        <jcamp.version>0.9.1</jcamp.version>
         <cml.groupId>cml</cml.groupId>
         <jumbo.groupId>org.xml-cml</jumbo.groupId>
         <jumbo.version>6.1-SNAPSHOT</jumbo.version>
@@ -189,6 +189,7 @@
                 <artifactId>jumbo</artifactId>
                 <version>${jumbo.version}</version>
             </dependency>
+            
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
