@@ -45,6 +45,7 @@
         <log4j.version>1.2.13</log4j.version>
         <cdk.version>1.2.0</cdk.version>
         <jcamp.version>0.9.1</jcamp.version>
+        <junit.version>4.8.2</junit.version>
         <cml.groupId>cml</cml.groupId>
         <jumbo.groupId>org.xml-cml</jumbo.groupId>
         <jumbo.version>6.1-SNAPSHOT</jumbo.version>
@@ -54,6 +55,7 @@
         <jumboconverters.groupId>cml</jumboconverters.groupId>
         <jumboconverters.version>0.3-SNAPSHOT</jumboconverters.version>
         <jumboConverters.groupId>org.xml-cml</jumboConverters.groupId>
+        <all.packaging>jar</all.packaging>
     </properties>
 
     <build>
@@ -91,80 +93,6 @@
                 <artifactId>commons-io</artifactId>
                 <version>2.0</version>
             </dependency>
-            <dependency>
-                <groupId>commons-codec</groupId>
-                <artifactId>commons-codec</artifactId>
-                <version>1.4</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.httpcomponents</groupId>
-                <artifactId>httpclient</artifactId>
-                <version>4.0.3</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.httpcomponents</groupId>
-                <artifactId>httpmime</artifactId>
-                <version>4.0.3</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.quartz-scheduler</groupId>
-                <artifactId>quartz</artifactId>
-                <version>${quartz.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>net.sf.atomxom</groupId>
-                <artifactId>atomxom-core</artifactId>
-                <version>${atomxom.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>net.sf.atomxom</groupId>
-                <artifactId>atomxom-feeds</artifactId>
-                <version>${atomxom.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava-collections</artifactId>
-                <version>r03</version>
-            </dependency>
-            <dependency>
-                <groupId>com.google.inject</groupId>
-                <artifactId>guice</artifactId>
-                <version>${guice.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.google.inject.extensions</groupId>
-                <artifactId>guice-multibindings</artifactId>
-                <version>${guice.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.google.inject.extensions</groupId>
-                <artifactId>guice-servlet</artifactId>
-                <version>${guice.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.restlet.jee</groupId>
-                <artifactId>org.restlet</artifactId>
-                <version>${restlet.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.restlet.jee</groupId>
-                <artifactId>org.restlet.ext.freemarker</artifactId>
-                <version>${restlet.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.restlet.jee</groupId>
-                <artifactId>org.restlet.ext.fileupload</artifactId>
-                <version>${restlet.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.restlet.jee</groupId>
-                <artifactId>org.restlet.ext.json</artifactId>
-                <version>${restlet.version}</version>
-            </dependency>
 
             <dependency>
                 <groupId>org.freemarker</groupId>
@@ -191,6 +119,18 @@
             </dependency>
             
             <dependency>
+                <groupId>${cml.groupId}</groupId>
+                <artifactId>cmlxom</artifactId>
+                <version>${cmlxom.version}</version>
+            </dependency>
+            
+            <dependency>
+                <groupId>${cml.groupId}</groupId>
+                <artifactId>jumbo-testutil</artifactId>
+                <version>${jumbo-testutil.version}</version>
+            </dependency>
+            
+            <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
                 <version>2.5</version>
@@ -204,8 +144,15 @@
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>4.8.2</version>
+                <version>${junit.version}</version>
+                <scope>test</scope>
             </dependency>
+        <dependency>
+            <groupId>org.xml-cml</groupId>
+            <artifactId>jumbo-testutil</artifactId>
+            <version>${jumbo-testutil.version}</version>
+            <scope>test</scope>
+        </dependency>
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-core</artifactId>
