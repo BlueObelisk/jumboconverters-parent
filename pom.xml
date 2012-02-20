@@ -1,177 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>uk.ac.cam.ch.wwmm</groupId>
-        <artifactId>wwmm-parent</artifactId>
-        <version>3</version>
-    </parent>
+	<parent>
+		<groupId>uk.ac.cam.ch.wwmm</groupId>
+		<artifactId>wwmm-parent</artifactId>
+		<version>3</version>
+	</parent>
 
-    <groupId>cml</groupId>
-    <artifactId>jc-parent</artifactId>
-    <version>0.3-SNAPSHOT</version>
-    <packaging>pom</packaging>
+	<groupId>org.xml-cml.jc</groupId>
+	<artifactId>jc-parent</artifactId>
+	<version>0.3-SNAPSHOT</version>
+	<packaging>pom</packaging>
 
-    <name>JumboConverters Parent</name>
+	<name>JumboConverters Parent</name>
 
-    <repositories>
-        <repository>
-            <id>ucc-repo</id>
-            <url>https://maven.ch.cam.ac.uk/m2repo</url>
-        </repository>
-        <repository>
-            <id>restlet</id>
-            <url>http://maven.restlet.org</url>
-        </repository>
-    </repositories>
+	<repositories>
+		<repository>
+			<id>ucc-repo</id>
+			<url>https://maven.ch.cam.ac.uk/m2repo</url>
+		</repository>
+		<repository>
+			<id>restlet</id>
+			<url>http://maven.restlet.org</url>
+		</repository>
+	</repositories>
 
 
-    <properties>
-        <restlet.version>2.0.7</restlet.version>
-        <guice.version>3.0</guice.version>
-        <jena.version>2.6.3</jena.version>
-        <jena.arq.version>2.8.4</jena.arq.version>
-        <jena.tdb.version>0.8.6</jena.tdb.version>
-        <quartz.version>1.8.4</quartz.version>
-        <atomxom.version>0.2-SNAPSHOT</atomxom.version>
-        <jtidy.version>4aug2000r7-dev</jtidy.version>
-        <commons.io.version>2.0</commons.io.version>
-        <freemarker.version>2.3.16</freemarker.version>
-        <java3d.version>1.3.1</java3d.version>
-        <jgrapht.version>0.7.3</jgrapht.version>
-        <log4j.version>1.2.13</log4j.version>
-        <cdk.version>1.2.0</cdk.version>
-        <jcamp.version>0.9.1</jcamp.version>
-        <junit.version>4.8.2</junit.version>
-        <cml.groupId>cml</cml.groupId>
-        <jumbo.groupId>org.xml-cml</jumbo.groupId>
-        <jumbo.version>6.1-SNAPSHOT</jumbo.version>
-        <cmlxom.version>3.2-SNAPSHOT</cmlxom.version>
-        <jumbo-testutil.version>1.1-SNAPSHOT</jumbo-testutil.version>
-        <jumbounits.version>0.2-SNAPSHOT</jumbounits.version>
-        <jumboconverters.groupId>cml</jumboconverters.groupId>
-        <jumboconverters.version>0.3-SNAPSHOT</jumboconverters.version>
-        <jumboConverters.groupId>org.xml-cml</jumboConverters.groupId>
-        <all.packaging>jar</all.packaging>
-    </properties>
+	<properties>
+		<restlet.version>2.0.7</restlet.version>
+		<guice.version>3.0</guice.version>
+		<jena.version>2.6.3</jena.version>
+		<jena.arq.version>2.8.4</jena.arq.version>
+		<jena.tdb.version>0.8.6</jena.tdb.version>
+		<quartz.version>1.8.4</quartz.version>
+		<atomxom.version>0.2-SNAPSHOT</atomxom.version>
+		<jtidy.version>4aug2000r7-dev</jtidy.version>
+		<commons.io.version>2.0</commons.io.version>
+		<freemarker.version>2.3.16</freemarker.version>
+		<java3d.version>1.3.1</java3d.version>
+		<jgrapht.version>0.7.3</jgrapht.version>
+		<log4j.version>1.2.13</log4j.version>
+		<cdk.version>1.2.0</cdk.version>
+		<jcamp.version>0.9.1</jcamp.version>
+		<junit.version>4.8.2</junit.version>
+		
+        <jc.groupId>org.xml-cml.jc</jc.groupId>
+		<cdx.groupId>cml</cdx.groupId>
+		<cif.groupId>org.xml-cml</cif.groupId>
 
-    <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+		<jumbo.groupId>org.xml-cml</jumbo.groupId>
+		<cmlxom.version>3.2-SNAPSHOT</cmlxom.version>
 
-    <dependencyManagement>
 
-        <dependencies>
-            <dependency>
-                <groupId>com.hp.hpl.jena</groupId>
-                <artifactId>jena</artifactId>
-                <version>${jena.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.hp.hpl.jena</groupId>
-                <artifactId>arq</artifactId>
-                <version>${jena.arq.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.hp.hpl.jena</groupId>
-                <artifactId>tdb</artifactId>
-                <version>${jena.tdb.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>commons-io</groupId>
-                <artifactId>commons-io</artifactId>
-                <version>2.0</version>
-            </dependency>
+		<jumbo.version>6.1-SNAPSHOT</jumbo.version>
 
-            <dependency>
-                <groupId>org.freemarker</groupId>
-                <artifactId>freemarker</artifactId>
-                <version>2.3.16</version>
-            </dependency>
+		<jumbo-testutil.version>1.1-SNAPSHOT</jumbo-testutil.version>
 
-            <dependency>
-                <groupId>com.thoughtworks.xstream</groupId>
-                <artifactId>xstream</artifactId>
-                <version>1.3.1</version>
-            </dependency>
+		<jumbounits.version>0.2-SNAPSHOT</jumbounits.version>
 
-            <dependency>
-                <groupId>xom</groupId>
-                <artifactId>xom</artifactId>
-                <version>1.2.5</version>
-            </dependency>
+		<jumboconverters.groupId>cml</jumboconverters.groupId>
+		<jumboconverters.version>0.3-SNAPSHOT</jumboconverters.version>
+		<jumboConverters.groupId>org.xml-cml</jumboConverters.groupId>
+		
+		<all.packaging>jar</all.packaging>
+	</properties>
 
-            <dependency>
-                <groupId>${jumbo.groupId}</groupId>
-                <artifactId>jumbo</artifactId>
-                <version>${jumbo.version}</version>
-            </dependency>
-            
-            <dependency>
-                <groupId>${cml.groupId}</groupId>
-                <artifactId>cmlxom</artifactId>
-                <version>${cmlxom.version}</version>
-            </dependency>
-            
-            <dependency>
-                <groupId>${cml.groupId}</groupId>
-                <artifactId>jumbo-testutil</artifactId>
-                <version>${jumbo-testutil.version}</version>
-            </dependency>
-            
-            <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>servlet-api</artifactId>
-                <version>2.5</version>
-            </dependency>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>${log4j.version}</version>
-        </dependency>
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
-                <scope>test</scope>
-            </dependency>
-        <dependency>
-            <groupId>org.xml-cml</groupId>
-            <artifactId>jumbo-testutil</artifactId>
-            <version>${jumbo-testutil.version}</version>
-            <scope>test</scope>
-        </dependency>
-            <dependency>
-                <groupId>org.mockito</groupId>
-                <artifactId>mockito-core</artifactId>
-                <version>1.8.5</version>
-            </dependency>
+	<dependencyManagement>
 
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>1.6.1</version>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-log4j12</artifactId>
-                <version>1.6.1</version>
-            </dependency>
+		<dependencies>
+			<dependency>
+				<groupId>com.hp.hpl.jena</groupId>
+				<artifactId>jena</artifactId>
+				<version>${jena.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.hp.hpl.jena</groupId>
+				<artifactId>arq</artifactId>
+				<version>${jena.arq.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.hp.hpl.jena</groupId>
+				<artifactId>tdb</artifactId>
+				<version>${jena.tdb.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>2.0</version>
+			</dependency>
 
-        </dependencies>
+			<dependency>
+				<groupId>org.freemarker</groupId>
+				<artifactId>freemarker</artifactId>
+				<version>2.3.16</version>
+			</dependency>
 
-    </dependencyManagement>
+			<dependency>
+				<groupId>com.thoughtworks.xstream</groupId>
+				<artifactId>xstream</artifactId>
+				<version>1.3.1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>xom</groupId>
+				<artifactId>xom</artifactId>
+				<version>1.2.5</version>
+			</dependency>
+
+			<dependency>
+				<groupId>${jumbo.groupId}</groupId>
+				<artifactId>jumbo</artifactId>
+				<version>${jumbo.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>${jumbo.groupId}</groupId>
+				<artifactId>cmlxom</artifactId>
+				<version>${cmlxom.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>2.5</version>
+			</dependency>
+
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			
+			<!--  test  -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>${jumbo.groupId}</groupId>
+				<artifactId>jumbo-testutil</artifactId>
+				<version>${jumbo-testutil.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-core</artifactId>
+				<version>1.8.5</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.6.1</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>1.6.1</version>
+			</dependency>
+
+		</dependencies>
+
+	</dependencyManagement>
 
 </project>
