@@ -31,36 +31,53 @@
 	<properties>
 		<restlet.version>2.0.7</restlet.version>
 		<guice.version>3.0</guice.version>
+		<!--  for comparing RDF -->
 		<jena.version>2.6.3</jena.version>
 		<jena.arq.version>2.8.4</jena.arq.version>
 		<jena.tdb.version>0.8.6</jena.tdb.version>
+		
 		<quartz.version>1.8.4</quartz.version>
+		
 		<atomxom.version>0.2-SNAPSHOT</atomxom.version>
+		
 		<jtidy.version>4aug2000r7-dev</jtidy.version>
+		
 		<commons.io.version>2.0</commons.io.version>
+		
 		<freemarker.version>2.3.16</freemarker.version>
+	<!--  java3d used in CIF, at least? -->
+		<java3d.groupId>java3d</java3d.groupId>
 		<java3d.version>1.3.1</java3d.version>
+		
 		<jgrapht.version>0.7.3</jgrapht.version>
+		
 		<log4j.version>1.2.13</log4j.version>
+	<!--  cdk -->
+	<!-- 
+		<cdk.groupId>org.openscience.cdk</cdk.groupId>
+		<cdk.artifact>cdk-core</cdk.artifact>
 		<cdk.version>1.2.0</cdk.version>
+		-->
+		<!--  special version  -->
+		<cdk.groupId>cdk</cdk.groupId>
+		<cdk.artifact>cdk</cdk.artifact>
+		<cdk.version>20071025</cdk.version>
+		
 		<jcamp.version>0.9.1</jcamp.version>
 		<junit.version>4.8.2</junit.version>
 		
         <jc.groupId>org.xml-cml.jc</jc.groupId>
+        <!-- chemdraw -->
 		<cdx.groupId>cml</cdx.groupId>
+		<!--  cif -->
 		<cif.groupId>org.xml-cml</cif.groupId>
-
+	<!--  most jumbo components -->
 		<jumbo.groupId>org.xml-cml</jumbo.groupId>
 		<cmlxom.version>3.2-SNAPSHOT</cmlxom.version>
-
-
 		<jumbo.version>6.1-SNAPSHOT</jumbo.version>
-
 		<jumbo-testutil.version>1.1-SNAPSHOT</jumbo-testutil.version>
-
 		<jumbounits.version>0.2-SNAPSHOT</jumbounits.version>
 
-		<jumboconverters.groupId>cml</jumboconverters.groupId>
 		<jumboconverters.version>0.3-SNAPSHOT</jumboconverters.version>
 		<jumboConverters.groupId>org.xml-cml</jumboConverters.groupId>
 		
