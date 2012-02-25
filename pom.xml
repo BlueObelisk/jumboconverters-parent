@@ -63,17 +63,19 @@
 		<cdk.artifact>cdk</cdk.artifact>
 		<cdk.version>20071025</cdk.version>
 		
-		<jcamp.version>0.9.1</jcamp.version>
+		<junit.groupId>junit</junit.groupId>
+		<junit.artifactId>junit</junit.artifactId>
 		<junit.version>4.8.2</junit.version>
 		
         <jc.groupId>org.xml-cml.jc</jc.groupId>
         <!-- chemdraw -->
-		<cdx.groupId>cml</cdx.groupId>
+		<chemdraw.groupId>cml</chemdraw.groupId>
 		<!--  cif -->
 		<cif.groupId>org.xml-cml</cif.groupId>
 	<!--  most jumbo components -->
 		<jumbo.groupId>org.xml-cml</jumbo.groupId>
 		<cmlxom.version>3.2-SNAPSHOT</cmlxom.version>
+		
 		<jumbo.version>6.1-SNAPSHOT</jumbo.version>
 		<jumbo-testutil.version>1.1-SNAPSHOT</jumbo-testutil.version>
 		<jumbounits.version>0.2-SNAPSHOT</jumbounits.version>
@@ -96,6 +98,8 @@
 		</plugins>
 	</build>
 
+<!-- this specifies the version numbers which are used by default
+it does NOT include these in the dependency tree -->
 	<dependencyManagement>
 
 		<dependencies>
@@ -162,18 +166,22 @@
 				<version>${log4j.version}</version>
 			</dependency>
 			
+	        <dependency>
+	            <groupId>jtidy</groupId>
+	            <artifactId>jtidy</artifactId>
+				<version>${jtidy.version}</version>
+	        </dependency>
+	        
 			<!--  test  -->
 			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
+				<groupId>${junit.groupId}</groupId>
+				<artifactId>${junit.artifactId}</artifactId>
 				<version>${junit.version}</version>
-				<scope>test</scope>
 			</dependency>
 			<dependency>
 				<groupId>${jumbo.groupId}</groupId>
 				<artifactId>jumbo-testutil</artifactId>
 				<version>${jumbo-testutil.version}</version>
-				<scope>test</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.mockito</groupId>
